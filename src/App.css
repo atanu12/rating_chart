@@ -1,11 +1,35 @@
-.chart {
+
+.chart-container {
   display: flex;
   align-items: flex-end;
-  height: 400px;
   margin: 20px;
-  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.y-axis {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
   gap: 3%;
-  padding: 1rem;
+  height: 200px;
+  margin-right: 10px;
+}
+
+.y-label {
+  text-align: right;
+  margin-right: 5px;
+}
+
+.chart {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: flex-end;
+  height: 200px;
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  width: 100%;
+  gap: 2%;
+  border-left: 1px solid #ccc;
 }
 
 .bar {
@@ -17,7 +41,7 @@
 .bar-inner {
   width: 30px;
   background-color: #4caf50;
-  transition: height 0.3s ease;
+  transition: height 0.3s ease-in-out;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -25,16 +49,20 @@
 .label {
   margin-top: 5px;
 }
-
-.bar-inner {
-  transition: height 0.3s ease-in-out;
+.hr{
+  width: 30%;
+  border-top: 1px solid #ccc;
+  position: absolute;
+  transform: translate(0, -36px);
 }
+
 .button {
   border: none;
   outline: none;
   background: #4681f4;
-  padding: 1rem;
+  padding: 0.6rem;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-left: 1.2rem;
 }
+
